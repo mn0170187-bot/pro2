@@ -1,0 +1,6 @@
+{
+  "name": "HOROLOGUE Watch Store",
+  "description": "A minimal, premium editorial e-commerce website for a luxury watch store, featuring curated timepieces, cart persistence, guest/user checkout, simulated Razorpay integration, and an administrative control panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

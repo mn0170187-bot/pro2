@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --color-gold: #C5A059;
+  --color-gold-dark: #A68343;
+  --color-zinc-950: #ffffff;
+  --color-zinc-900: #f9f8f6;
+  --color-zinc-850: #f1efea;
+  --color-zinc-800: #e6e4de;
+  --color-zinc-700: #d5d2c8;
+  --color-zinc-650: #b0aca0;
+  --color-zinc-600: #8c887d;
+  --color-zinc-500: #706b60;
+  --color-zinc-400: #4a4740;
+  --color-zinc-300: #2d2b27;
+  --color-zinc-200: #1c1a17;
+  --color-zinc-100: #12110f;
+}
+
+/* Custom Scrollbar for minimalist feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f8f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+}
+
+body {
+  background-color: #ffffff;
+  color: #12110f;
+  font-family: var(--font-sans);
+}
+
+/* Ensure headings have serif premium styling when requested */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Let's fix text-white in specific containers to be dark so they display perfectly in light mode */
+.text-white {
+  color: #12110f !important;
+}
+
+/* But keep some specific text-white elements white, like inside buttons, badges, dark overlays, or inputs! */
+button.text-white, 
+a.text-white, 
+.bg-gold .text-white, 
+.bg-black .text-white,
+.bg-zinc-950 .text-white,
+.bg-red-950 .text-white,
+.bg-green-950 .text-white,
+.bg-zinc-800 .text-white,
+.text-white-keep,
+.bg-gold-dark .text-white,
+.bg-red-600 .text-white,
+.bg-green-600 .text-white,
+.bg-blue-600 .text-white,
+.bg-stone-900 .text-white {
+  color: #ffffff !important;
+}
+
+/* Solid gold backgrounds should always have dark/light contrast text */
+.bg-gold {
+  background-color: #C5A059 !important;
+}
+.bg-gold text-black, .bg-gold .text-black {
+  color: #12110f !important;
+}
+
+/* Fix background transparencies that might look washed out */
+.bg-zinc-950\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.bg-zinc-950\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.bg-zinc-900\/60 {
+  background-color: rgba(249, 248, 246, 0.6) !important;
+}
+.bg-zinc-900\/40 {
+  background-color: rgba(249, 248, 246, 0.4) !important;
+}
+
+/* Hover scales and modern animations */
+button, a {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
